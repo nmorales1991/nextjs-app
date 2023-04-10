@@ -17,7 +17,6 @@ export default Blog;
 
 // getStaticProps genera props estáticas siempre en el build de la aplicación
 export async function getStaticProps() {
-  console.log('getstaticprops');
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await res.json();
 

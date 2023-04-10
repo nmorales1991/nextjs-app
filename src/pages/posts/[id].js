@@ -11,7 +11,6 @@ export default Posts;
 
 // getStaticPaths se usa en páginas dinámicas, en el build de la aplicación se cargan los posibles paths, se usa en conjunto con getStaticProps
 export async function getStaticPaths() {
-  console.log('getStaticPaths');
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
   const posts = await res.json()
 
@@ -24,7 +23,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log('getStaticProps');
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
   const post = await res.json()
 
