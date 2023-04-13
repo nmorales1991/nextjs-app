@@ -16,9 +16,18 @@ const Users = ({data}) => {
 export default Users;
 
 // getServerSideProps se llamará en cada renderizado
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  // context devuelve un objeto con data como el req, res, params, query, locale, etc
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
   const data = await res.json()
-
+  // puedo retornar notFound true para redirigir a 404 aun que la llamada a la api haya sido éxito
+  //return { notFound : true }
+  // puedo redireccionar a cualquier otra página o url
+  /* return {
+    redirect: {
+      destination: '/',
+      permanent: false,
+    },
+  } */
   return { props: { data } }
 }
