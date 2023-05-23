@@ -27,6 +27,6 @@ export async function getStaticProps() {
     },
     // al agregar esto, se mostrará la página cacheada desde la primera petición hasta los segundos que se indica, luego de eso se regenera la página. (probar actualizando la página varias veces, después de 10 segundos se notará un delay)
     // a esto se llama Incremental static generator
-    revalidate: 10
+    //revalidate: 10
   }
 }
