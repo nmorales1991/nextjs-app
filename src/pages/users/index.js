@@ -17,6 +17,7 @@ export default Users;
 
 // getServerSideProps se llamará en cada renderizado
 export async function getServerSideProps(context) {
+  console.log('getserversideprops');
   // context devuelve un objeto con data como el req, res, params, query, locale, etc
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
   const data = await res.json()
