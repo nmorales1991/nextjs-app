@@ -5,7 +5,8 @@ const Blog = ({ posts }) => {
         return(
           <div key={post.id} style={{border:'#000 solid 1px', margin: 5}}>
             <div>{post.title}</div>
-            <div>{post.body}</div>
+            <div>{post.title}</div>
+            <div>{post.title}</div>
             <p>{post.body}</p>
           </div>
         )
